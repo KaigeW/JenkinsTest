@@ -5,18 +5,18 @@ pipeline {
     stages {
         stage('Build'){
             steps {
-                echo "building..."
+                echo "building...."
                 archiveArtifacts artifacts: '**/target/*.jar', fingerprint: true
             }
         }
         stage('Test'){
             steps {
-                echo "Testing..."
+                echo "Testing...."
             }
         }
         stage('Deploy'){
             steps {
-                echo "Deploying..."
+                echo "Deploying...."
             }
         }
     }
