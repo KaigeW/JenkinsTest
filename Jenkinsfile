@@ -5,8 +5,18 @@ pipeline {
     stages {
         stage('Build'){
             steps {
-                mvn build
+                echo "building..."
                 archiveArtifacts artifacts: '**/target/*.jar', fingerprint: true
+            }
+        }
+        stage('Test'){
+            steps {
+                echo "Testing..."
+            }
+        }
+        stage('Deploy'){
+            steps {
+                echo "Deploying..."
             }
         }
     }
