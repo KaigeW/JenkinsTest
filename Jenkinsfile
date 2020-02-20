@@ -5,7 +5,7 @@ pipeline {
     stages {
         stage('Build'){
             steps {
-                bat 'mvn build'
+                mvn build
                 archiveArtifacts artifacts: '**/target/*.jar', fingerprint: true
             }
         }
